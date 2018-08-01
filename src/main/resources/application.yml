@@ -1,0 +1,15 @@
+server: 
+  port: 9091
+spring: 
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://101.132.154.24:31306/test?characterEncoding=UTF-8
+    username: root
+    password: sNMrdHMwLQC9cNXn9DuKPDeLMUtXchlP
+
+mybatis:
+  mapper-locations: classpath:xml/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# yml的格式要求,每个:后面必须加一个空格或者tab.

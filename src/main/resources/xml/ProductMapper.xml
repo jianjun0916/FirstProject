@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kunchi.dao.ProductMapper">
+    <select id="getList" resultType="com.kunchi.po.Product">
+        SELECT id,productCode,productName,storeCode,storeName,inventory FROM product
+        <where>
+            <if test="params.productCode!=null and params.productCode!=''">
+                and productCode = #{params.productCode}
+            </if>
+            <if test="params.productName!=null and params.productName!=''">
+                and productName = #{params.productName}
+            </if>
+            <if test="params.storeCode!=null and params.storeCode!=''">
+                and storeCode = #{params.storeCode}
+            </if>
+        </where>
+    </select>
+</mapper>

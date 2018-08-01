@@ -1,0 +1,9 @@
+server: 
+  port: 9090
+spring: 
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8
+    username: root
+    password: 1
+# yml的格式要求,每个:后面必须加一个空格或者tab.
